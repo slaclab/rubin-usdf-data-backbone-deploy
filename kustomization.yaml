@@ -1,0 +1,7 @@
+namespace: rucio-kafka
+
+resources:
+- operator.yaml
+- ns.yaml
+- kafka-persistent.yaml
+- kafka-connect.yaml
