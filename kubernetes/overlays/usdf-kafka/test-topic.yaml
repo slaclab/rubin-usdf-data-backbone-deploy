@@ -1,0 +1,14 @@
+apiVersion: kafka.strimzi.io/v1beta2
+kind: KafkaTopic
+metadata:
+  name: test-topic
+  namespace: rucio
+  labels:
+    strimzi.io/cluster: rucio-kafka
+spec:
+  partitions: 1
+  replicas: 1
+status:
+  conditions:
+  - status: "True"
+  - type: Ready
