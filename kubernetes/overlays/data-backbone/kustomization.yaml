@@ -2,13 +2,10 @@ images:
 - name: docker.io/redis
   newTag: "7.0.8"
 
-namespace: usdf-kafka
+namespace: rucio
 
 resources:
-- ns.yaml
 - redis-deploy.yaml
-- strimzi-0.35.1.yaml
-- kafka-persistent.yaml
 
 secretGenerator:
 - name: redis

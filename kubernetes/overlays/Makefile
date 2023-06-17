@@ -1,3 +1,3 @@
 
 apply:
-	cd usdf-kafka && make apply
+	cd data-backbone && make apply
