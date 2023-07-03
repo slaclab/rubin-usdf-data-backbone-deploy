@@ -1,0 +1,4 @@
+namespace: strimzi
+
+resources:
+- strimzi-0.35.1.yaml
