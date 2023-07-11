@@ -1,14 +1,12 @@
-SECRET_PATH ?= secret/rubin/usdf-rucio-data-backbone
+SECRET_PATH ?= secret/rubin/usdf-rucio-data-backbone/data-backbone
 ENV = $(notdir ${CURDIR})
 
 get-secrets-from-vault:
-#	mkdir -p etc/.secrets/
-	# internal redis password and Ceph notification secret
-#	set -e; for i in redis; do vault kv get --field=$$i ${SECRET_PATH}/${ENV} > etc/.secrets/$$i ; done
+	mkdir -p redis/etc/.secrets/
+	vault kv get --field=redis ${SECRET_PATH} > redis/etc/.secrets/redis-secret
 
 clean-secrets:
-	rm -rf etc/.secrets/
-#	rmdir ./etc
+	rm -rf redis/etc/.secrets/
 
 run-apply:
 	kubectl apply -k .

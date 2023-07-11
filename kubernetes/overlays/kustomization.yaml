@@ -1,6 +1,6 @@
 
 bases:
-- strimzi/clusterRoleBinding/ # applied to default namespace
+- strimzi/clusterRoleBinding/
 - strimzi/operator/
 - kafka/
 - redis/
