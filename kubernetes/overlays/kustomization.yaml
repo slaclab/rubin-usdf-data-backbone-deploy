@@ -4,3 +4,4 @@ bases:
 - strimzi/operator/
 - kafka/
 - redis/
+- rucio-events/

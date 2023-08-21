@@ -1,0 +1,5 @@
+namespace: rucio
+
+resources:
+- ns.yaml
+- rucio-topics.yaml

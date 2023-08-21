@@ -1,0 +1,26 @@
+---
+apiVersion: kafka.strimzi.io/v1beta2
+kind: KafkaTopic
+metadata:
+  name: "butler-frdf-test"
+  labels:
+    strimzi.io/cluster: rucio-kafka
+spec:
+  partitions: 16
+  replicas: 3
+#  config:
+    # http://kafka.apache.org/documentation/#topicconfigs
+#    retention.ms: 1800000  # 30 minutes
+---
+apiVersion: kafka.strimzi.io/v1beta2
+kind: KafkaTopic
+metadata:
+  name: "butler-ukdf-test"
+  labels:
+    strimzi.io/cluster: rucio-kafka
+spec:
+  partitions: 16
+  replicas: 3
+#  config:
+    # http://kafka.apache.org/documentation/#topicconfigs
+#    retention.ms: 1800000  # 30 minutes
